@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+        <h2 class="mt-5 mb-5 text-center">Список транзакций</h2>
+        <form action="{{ url_for('add_transaction') }}">
+            <div class="form-group">
+                <label>Введите период транзакции</label>
+                <input name="period" type="text" class="form-control">
+                <label>Сумма</label>
+                <input name="value" type="text" class="form-control">
+                <label>Статус </label>
+                <input name="status" type="text" class="form-control">
+                <label>Валюта</label>
+                <input name="unit" type="text" class="form-control">
+                <label>Валюта</label>
+                <input name="subject" type="text" class="form-control">
+
+            </div>
+             <button type="submit" class="btn btn-primary">Добавить транзакцию</button>
+
+{% endblock content %}
